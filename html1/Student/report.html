@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Reports</title>
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+<div class="container">
+  <h1>My Reports and Analytics</h1>
+  <div class="reports">
+    <h2>Overall Performance</h2>
+    <p>Total Exams Taken: <span id="totalExams">Loading...</span></p>
+    <p>Average Score: <span id="averageScore">Loading...</span></p>
+    <h2>Performance by Subject</h2>
+    <table id="subjectPerformance">
+      <tr>
+        <th>Subject</th>
+        <th>Average Score</th>
+      </tr>
+      <!-- Data will be dynamically populated here -->
+    </table>
+    <h2>Performance Over Time</h2>
+    <canvas id="performanceChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
