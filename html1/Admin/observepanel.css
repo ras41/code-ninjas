@@ -1,0 +1,81 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-panel {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-streams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .student {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .student h2 {
+    margin-bottom: 10px;
+  }
+  
+  .stream {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .screen, .camera {
+    width: 48%;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+ /* styles.css */
+
+/* Add this media query at the end of your CSS */
+
+@media screen and (max-width: 768px) {
+    .student {
+      width: 100%; /* Make each student take up full width on small screens */
+      margin-bottom: 20px; /* Add some spacing between students on small screens */
+    }
+  
+    .stream {
+      flex-wrap: wrap; /* Allow the screen and camera to wrap onto the next line if necessary */
+    }
+  
+    .screen, .camera {
+      width: calc(50% - 10px); /* Make screen and camera take up half of the width with some spacing in between */
+      margin-right: 10px; /* Add some spacing between screen and camera */
+      margin-bottom: 10px; /* Add some spacing between screen/camera pairs */
+    }
+  
+    .student h2 {
+      font-size: 18px; /* Reduce font size for student names on small screens */
+    }
+  }
+
+  
+  
