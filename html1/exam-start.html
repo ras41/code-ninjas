@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Exam</h1>
+    <h3>Exam 1</h3>
+
+
+    <h4></h4>
+
+      <input type="radio" id="html" name="Exam" value="HTML">
+      <label for="html">Exam 1
+    </label><br>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        video {
+            width: 300px;
+            float: left;
+            margin-right: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            margin-top: 0;
+        }
+        .question p {
+            margin-bottom: 10px;
+        }
+        .options {
+            margin-bottom: 20px;
+        }
+        .question-numbers {
+            margin-bottom: 20px;
+        }
+        .navigation {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .navigation button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .submit-button {
+            float: right;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exam</h1>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="question">
+            <h2>Question 1</h2>
+            <p>This is the question.</p>
+            <div class="options">
+                <input type="radio" name="option" id="option1">
+                <label for="option1">Option 1</label><br>
+                <input type="radio" name="option" id="option2">
+                <label for="option2">Option 2</label><br>
+                <input type="radio" name="option" id="option3">
+                <label for="option3">Option 3</label><br>
+                <input type="radio" name="option" id="option4">
+                <label for="option4">Option 4</label><br>
+            </div>
+        </div>
+        <div class="question-numbers">
+            <!-- Generate question numbers dynamically -->
+            <span>1</span> <span>2</span> <span>3</span> <!-- and so on -->
+        </div>
+        <div class="navigation">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        <button class="submit-button">Submit</button>
+    </div>
+</body>
+</html>
