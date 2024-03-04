@@ -1,0 +1,62 @@
+import React from 'react';
+
+import "./App.css"
+
+class AdminRegistrationForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      teacherName: '',
+      institutionName: '',
+      idNumber: '',
+      course: '',
+      gender: 'male',
+      phoneNumber: ''
+    };
+  }
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', this.state);
+  };
+
+  render() {
+    return (
+      <div>
+        <h2>Administrator Registration Form</h2>
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="teacherName">Teacher Name:</label><br />
+          <input type="text" id="teacherName" name="teacherName" value={this.state.teacherName} onChange={this.handleChange} required /><br /><br />
+          
+          <label htmlFor="institutionName">Institution Name:</label><br />
+          <input type="text" id="institutionName" name="institutionName" value={this.state.institutionName} onChange={this.handleChange} required /><br /><br />
+          
+          <label htmlFor="idNumber">Id Number:</label><br />
+          <input type="text" id="idNumber" name="idNumber" value={this.state.idNumber} onChange={this.handleChange} required /><br /><br />
+          
+          <label htmlFor="course">Course:</label><br />
+          <input type="text" id="course" name="course" value={this.state.course} onChange={this.handleChange} required /><br /><br />
+          
+          <label htmlFor="gender">Gender:</label><br />
+          <select id="gender" name="gender" value={this.state.gender} onChange={this.handleChange} required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select><br /><br />
+          
+          <label htmlFor="phoneNumber">Phone Number:</label><br />
+          <input type="tel" id="phoneNumber" name="phoneNumber" value={this.state.phoneNumber} onChange={this.handleChange} pattern="[0-9]{10}" required /><br /><br />
+          
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    );
+  }
+}
+
+export default AdminRegistrationForm;
